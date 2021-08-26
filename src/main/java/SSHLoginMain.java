@@ -24,7 +24,7 @@ public class SSHLoginMain {
         if (Files.exists(Paths.get(hostParams.getIdentity()))) {
             jSch.addIdentity(hostParams.getIdentity(), hostParams.getPassphrase());
         }
-        Session session = jSch.getSession(hostParams.getUsr(), hostParams.getPwd(), hostParams.getSshPort());
+        Session session = jSch.getSession(hostParams.getUsr(), hostParams.getHostIp(), hostParams.getSshPort());
         session.setPassword(hostParams.getPwd());
         Properties properties = new Properties();
         properties.put("StrictHostKeyChecking", "no");
