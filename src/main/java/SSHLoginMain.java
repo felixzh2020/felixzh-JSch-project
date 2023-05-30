@@ -8,7 +8,7 @@ import java.util.Properties;
 
 public class SSHLoginMain {
     public static void main(String[] args) throws Exception {
-        HostParams hostParams = new HostParams("172.29.1.149", "root", "passwd");
+        HostParams hostParams = new HostParams("10.121.198.220", "root", "felixzh");
         Session session = getSession(hostParams);
         session.connect(50_000);
 
